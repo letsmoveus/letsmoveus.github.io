@@ -361,6 +361,12 @@
       background: rgba(224, 112, 48, 0.1);
     }
 
+    .action-btn-disabled {
+      opacity: 0.45;
+      cursor: default;
+      pointer-events: none;
+    }
+
     .action-btn .icon {
       font-size: 1rem;
     }
@@ -633,18 +639,18 @@
 
       <nav aria-label="Ways to get involved">
         <div class="action-buttons">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" class="action-btn">
+          <span class="action-btn action-btn-disabled" aria-disabled="true">
             <span class="icon" aria-hidden="true">&#x2795;</span> Add a Program
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" class="action-btn">
+          </span>
+          <span class="action-btn action-btn-disabled" aria-disabled="true">
             <span class="icon" aria-hidden="true">&#x1F91D;</span> Volunteer
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" class="action-btn">
+          </span>
+          <span class="action-btn action-btn-disabled" aria-disabled="true">
             <span class="icon" aria-hidden="true">&#x1F9E1;</span> Become a Sponsor
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" class="action-btn">
+          </span>
+          <span class="action-btn action-btn-disabled" aria-disabled="true">
             <span class="icon" aria-hidden="true">&#x1F514;</span> Get Notified at Launch
-          </a>
+          </span>
         </div>
       </nav>
     </section>
