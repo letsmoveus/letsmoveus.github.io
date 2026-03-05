@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Let's Move US is building the first national discovery platform dedicated entirely to adaptive sports and recreation for individuals with disabilities of all ages.">
-  <meta name="theme-color" content="#1B2838">
+  <meta name="theme-color" content="#0e1b2b">
   <title>Let's Move US: Adaptive Sports &amp; Recreation Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
   <style>
     /* Reset & Base */
     *, *::before, *::after {
@@ -15,17 +18,17 @@
     }
 
     :root {
-      --color-bg: #1B2838;
-      --color-bg-light: #223044;
-      --color-orange: #E07030;
-      --color-orange-hover: #C85E22;
-      --color-teal: #3BB8B0;
-      --color-yellow: #E8B830;
+      --color-bg: #0e1b2b;
+      --color-bg-light: #152233;
+      --color-orange: #fe5a1b;
+      --color-orange-hover: #d94b10;
+      --color-teal: #0ccbb5;
+      --color-yellow: #fad202;
       --color-white: #FFFFFF;
-      --color-light: #C8D4DC;
-      --color-muted: #8898A8;
-      --font-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      --font-display: 'Impact', 'Arial Black', 'Segoe UI', sans-serif;
+      --color-light: #c8d8e8;
+      --color-muted: #6a7f94;
+      --font-sans: 'Nunito', 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Nunito', 'Arial Black', sans-serif;
       --max-width: 800px;
     }
 
@@ -111,13 +114,17 @@
 
     .ticker-highlight {
       color: var(--color-orange);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
     }
 
     .ticker-icon {
       font-size: 1rem;
+    }
+
+    .ticker-teal {
+      color: var(--color-teal);
     }
 
     /* Hero Section */
@@ -131,18 +138,23 @@
       font-size: clamp(2.5rem, 8vw, 5rem);
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
       line-height: 1.1;
       margin-bottom: 0.75rem;
     }
 
-    .hero-title-us {
+    .hero-title-lets {
       color: var(--color-orange);
+    }
+
+    .hero-title-us {
+      color: transparent;
+      -webkit-text-stroke: 3px var(--color-teal);
     }
 
     .hero-subtitle {
       font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: var(--color-light);
+      color: var(--color-white);
       max-width: 500px;
       margin: 0 auto 1.25rem;
       font-weight: 400;
@@ -154,10 +166,10 @@
       gap: 0.5rem;
       font-family: var(--font-display);
       font-size: clamp(1.1rem, 3vw, 1.5rem);
-      color: var(--color-yellow);
+      font-weight: 800;
+      color: var(--color-teal);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-style: italic;
       padding: 0.25rem 0;
     }
 
@@ -187,34 +199,48 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      font-size: clamp(1.25rem, 3vw, 1.6rem);
+      font-weight: 800;
       color: var(--color-teal);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.01em;
       margin-bottom: 1rem;
       font-style: italic;
     }
 
     .section-text {
       font-size: clamp(0.9rem, 2vw, 1rem);
-      color: var(--color-light);
+      color: var(--color-white);
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.7;
     }
 
+    .section-title-orange {
+      color: var(--color-orange);
+    }
+
     /* Featured Pages Section */
     .featured {
       text-align: center;
-      padding: 2rem 1.5rem 0;
+      padding: 0 1.5rem 0;
+    }
+
+    .featured-header {
+      background: var(--color-white);
+      text-align: left;
+      padding: 1rem 2rem;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
     }
 
     .featured-label {
       font-family: var(--font-display);
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.1rem;
+      color: var(--color-bg);
     }
 
     .featured-label-highlight {
@@ -222,10 +248,9 @@
     }
 
     .featured-sub {
-      font-size: 0.85rem;
-      color: var(--color-muted);
-      font-style: italic;
-      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--color-bg);
+      margin-bottom: 0;
     }
 
     .phone-mockups {
@@ -241,10 +266,9 @@
 
     /* Launch Banner */
     .launch-banner {
-      background: var(--color-bg-light);
-      border: 2px solid var(--color-orange);
-      border-radius: 1rem;
-      padding: 1.5rem 2rem;
+      background: var(--color-white);
+      border-radius: 3rem;
+      padding: 1.5rem 2.5rem;
       max-width: 550px;
       margin: 0 auto 2.5rem;
       text-align: center;
@@ -252,7 +276,8 @@
 
     .launch-banner p {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
-      line-height: 1.5;
+      line-height: 1.6;
+      color: #0e1b2b;
     }
 
     .launch-banner .highlight {
@@ -271,8 +296,9 @@
     .cta-title {
       font-family: var(--font-display);
       font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       margin-bottom: 1rem;
     }
 
@@ -282,7 +308,7 @@
 
     .cta-text {
       font-size: clamp(0.9rem, 2vw, 1rem);
-      color: var(--color-light);
+      color: var(--color-white);
       max-width: 500px;
       margin: 0 auto 0.75rem;
       line-height: 1.7;
@@ -302,7 +328,7 @@
       color: var(--color-white);
       font-family: var(--font-display);
       font-size: clamp(1.25rem, 3vw, 1.75rem);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       padding: 1rem 2.5rem;
       border: none;
@@ -373,7 +399,8 @@
 
     /* Share Banner */
     .share-banner {
-      background: var(--color-orange);
+      background: var(--color-white);
+      border: 2px solid var(--color-orange);
       border-radius: 0.75rem;
       padding: 1.25rem 2rem;
       max-width: 550px;
@@ -381,11 +408,12 @@
       text-align: center;
       font-size: clamp(0.9rem, 2vw, 1rem);
       line-height: 1.6;
-      color: var(--color-white);
+      color: #0e1b2b;
     }
 
     .share-banner strong {
       font-weight: 700;
+      color: var(--color-orange);
     }
 
     /* Footer */
@@ -399,8 +427,9 @@
     .footer-title {
       font-family: var(--font-display);
       font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       margin-bottom: 0.75rem;
     }
 
@@ -410,7 +439,7 @@
 
     .footer-text {
       font-size: clamp(0.85rem, 2vw, 0.95rem);
-      color: var(--color-light);
+      color: var(--color-white);
       max-width: 500px;
       margin: 0 auto 1.5rem;
       line-height: 1.6;
@@ -418,8 +447,9 @@
 
     .footer-email {
       font-family: var(--font-display);
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
-      color: var(--color-teal);
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 700;
+      color: var(--color-white);
       text-decoration: none;
       display: inline-block;
       margin-bottom: 2rem;
@@ -545,10 +575,10 @@
   <div class="ticker" role="banner" aria-label="Site announcement">
     <p class="ticker-content">
       We're working on something great.
-      <span class="ticker-icon" aria-hidden="true">&#x1F525;</span>
-      <span class="ticker-highlight">Coming Soon</span>
-      <span class="ticker-icon" aria-hidden="true">&#x1F525;</span>
-      We're launching May 2025.
+      <span class="ticker-icon" aria-hidden="true">&#x26A0;&#xFE0F;</span>
+      <span class="ticker-teal">Coming Soon</span>
+      <span class="ticker-icon" aria-hidden="true">&#x26A0;&#xFE0F;</span>
+      <span class="ticker-highlight">We're launching May 2025.</span>
     </p>
   </div>
 
@@ -556,7 +586,7 @@
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title" class="hero-title">
-        Let's Move <span class="hero-title-us">US</span>
+        <span class="hero-title-lets">Let's</span> Move <span class="hero-title-us">US</span>
       </h1>
       <p class="hero-subtitle">
         An Adaptive Sports &amp; Recreation searchable database for all ages
@@ -568,11 +598,11 @@
       </p>
     </section>
 
-    <div class="separator" role="presentation"></div>
+    <!-- <div class="separator" role="presentation"></div> -->
 
     <!-- What is Let's Move US -->
     <section class="section" aria-labelledby="what-title">
-      <h2 id="what-title" class="section-title">What is Let's Move US?</h2>
+      <h2 id="what-title" class="section-title section-title-orange">What is Let's Move US?</h2>
       <p class="section-text">
         Let's Move US is building the first national discovery platform
         dedicated entirely to adaptive sports and recreation.
@@ -581,7 +611,7 @@
 
     <!-- Our Mission -->
     <section class="section" aria-labelledby="mission-title">
-      <h2 id="mission-title" class="section-title">Our Mission</h2>
+      <h2 id="mission-title" class="section-title section-title-orange">Our Mission</h2>
       <p class="section-text">
         To connect individuals with disabilities to adaptive sports and
         recreation opportunities that improve physical and emotional health,
@@ -589,14 +619,16 @@
       </p>
     </section>
 
-    <div class="separator" role="presentation"></div>
+    <!-- <div class="separator" role="presentation"></div> -->
 
     <!-- Featured Site Pages -->
     <section class="featured" aria-labelledby="featured-title">
-      <h2 id="featured-title" class="featured-label">
-        Featured <span class="featured-label-highlight">Site Pages</span>
-      </h2>
-      <p class="featured-sub">A sample of what you'll see at launch.</p>
+      <div class="featured-header">
+        <h2 id="featured-title" class="featured-label">
+          Featured <span class="featured-label-highlight">Site Pages</span>
+        </h2>
+        <p class="featured-sub">A sample of what you'll see at launch.</p>
+      </div>
       <div class="phone-mockups">
         <img
           src="phone-mockups.png"
@@ -616,8 +648,8 @@
         Then Nationwide
       </p>
     </div>
-
-    <div class="separator" role="presentation"></div>
+<!-- 
+    <div class="separator" role="presentation"></div> -->
 
     <!-- Ready to Move / CTA -->
     <section class="cta-section" aria-labelledby="cta-title">
