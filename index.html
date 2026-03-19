@@ -112,6 +112,28 @@
       flex-wrap: wrap;
     }
 
+    .about-btn {
+      display: inline-block;
+      background: var(--color-orange);
+      color: var(--color-white);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 1.1rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .about-btn:hover,
+    .about-btn:focus-visible {
+      background: var(--color-orange-hover);
+      transform: scale(1.04);
+    }
+
     .ticker-highlight {
       color: var(--color-orange);
       font-weight: 800;
@@ -599,6 +621,12 @@
     </section>
 
     <!-- <div class="separator" role="presentation"></div> -->
+
+    <div style="text-align:center; padding: 0 1.5rem 0.5rem;">
+      <a href="letsmoveus-Leadership_Team-Complete.pdf" class="about-btn" target="_blank" rel="noopener" aria-label="Learn about our leadership team (opens PDF)">
+        About Us
+      </a>
+    </div>
 
     <!-- What is Let's Move US -->
     <section class="section" aria-labelledby="what-title">
